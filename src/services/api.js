@@ -4,7 +4,7 @@ the backend information and relay it in a way that is usable to a human.
 */
 
 /* Base url from which API functions can attach specific routes to */
-const BASE_URL = "import.meta.env.VITE_API_URL";
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 // ==================== AUTHENTICATION API FUNCTIONS ====================
 // ======================================================================

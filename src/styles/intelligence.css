@@ -1,0 +1,10 @@
+
+.logo-disclaimer
+{
+    display: flex;
+    text-align: center;
+    margin-top: var(--space-xl);
+    background-color: var(--hash);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+}

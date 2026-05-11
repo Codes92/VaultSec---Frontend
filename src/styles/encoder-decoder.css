@@ -1,0 +1,117 @@
+/* =============== TITLE SECTION STYLING =============== */
+/* ===================================================== */
+.title-section
+{
+    margin-bottom: var(--space-xxl);
+    text-align: center;
+}
+
+/* ================ FORM SECTION STYLING =============== */
+/* ===================================================== */
+.encode-input-container
+{
+    background-color: var(--white);
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: var(--space-xl);
+    gap: var(--space-lg);
+    align-items: center;
+    margin-bottom: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+.encode-decode-buttons
+{
+    display: flex;
+    gap: var(--space-xl);
+}
+
+.encode-button, .decode-button
+{
+    padding: var(--space-md) var(--space-lg);
+    color: var(--surface);
+    border-radius: var(--radius-sm);
+    border: none;
+    font-size: var(--font-size-lg);
+}
+
+.encode-button
+{
+    background-color: var(--primary);
+}
+
+.encode-button:hover
+{
+    background-color: var(--primary-hover);
+}
+
+.decode-button
+{
+    background-color: var(--register);
+}
+
+.decode-button:hover
+{
+    background-color: var(--text-secondary);
+}
+
+@media(max-width: 768px)
+{
+    .encode-input-container
+    {
+        max-width: 90%;
+    }
+}
+
+/* ============== RESULTS SECTION STYLING ============== */
+/* ===================================================== */
+.base64-result-container
+{
+    background-color: var(--surface-dark);
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    align-items: center;
+}
+
+.base64-result-container p
+{
+    font-size: var(--font-size-lg);
+}
+
+.base-64-copy-button
+{
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--font-size-lg);
+    width: 60%;
+    background-color: var(--success);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-sm);
+}
+
+.base-64-copy-button:hover
+{
+    filter: brightness(0.9);
+}
+
+@media(max-width: 768px)
+{
+    .base-six-four-title-container
+    {
+        flex-direction: column;
+    }
+
+    .base64-result-container
+    {
+        max-width: 90%;
+    }
+}

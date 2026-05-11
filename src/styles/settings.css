@@ -1,0 +1,122 @@
+
+.settings-container
+{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    border-radius: var(--radius-md);
+    background: transparent;
+}
+
+.settings-card
+{
+    background-color: var(--surface);
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    border-radius: var(--radius-md);
+}
+
+.settings-border-bottom
+{
+    border: thin outset var(--text-muted);
+    width: 60%;
+    margin: 0 auto;
+}
+
+.danger-settings-card
+{
+    border: 2px solid var(--danger);
+}
+
+.settings-card-header
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.settings-info
+{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    width: 50%;
+}
+
+.settings-info p
+{
+    color: var(--text-secondary);
+}
+
+.toggle-mfa-button, .change-password-button, .delete-account-button
+{
+    width: 160px;
+    max-width: 160px;
+    padding: var(--space-sm) var(--space-sm);
+    border-radius: var(--radius-sm);
+    border: none;
+    font-family: inherit;
+    font-size: var(--text-size-md);
+    transition: all 0.2s;
+    color: var(--white);
+}
+
+.toggle-mfa-button
+{
+    background-color: var(--primary);
+}
+
+.toggle-mfa-button:hover
+{
+    background-color: var(--primary-hover);
+}
+
+.change-password-button
+{
+    background-color: var(--text-secondary);
+}
+
+.change-password-button:hover
+{
+    background-color: var(--text-muted);
+}
+
+.delete-account-button
+{
+    background-color: var(--danger);
+}
+
+.delete-account-button:hover
+{
+    opacity: 0.7;
+}
+
+@media(max-width: 700px)
+{
+    .settings-card
+    {
+        max-width: 100%;
+    }
+
+    .settings-card-header
+    {
+        flex-direction: column;
+        gap: var(--space-xl);
+        text-align: center;
+        align-items: center;
+    }
+
+    .settings-card-header button
+    {
+        width: 100%;
+    }
+
+    .settings-info
+    {
+        width: 100%;
+        gap: var(--space-md);
+    }
+}

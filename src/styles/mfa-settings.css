@@ -1,0 +1,55 @@
+
+.qr-code-image
+{
+    width: 200px;
+    height: 200px;
+    border-radius: var(--radius-sm);
+    margin: 0 auto;
+}
+
+.enable-mfa-buttons
+{
+    display: flex;
+    gap: var(--space-md);
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+}
+
+.mfa-modal-cancel, .verify-mfa-button
+{
+    padding: var(--space-sm) var(--space-xl);
+    font-size: var(--text-size-md);
+    border-radius: var(--radius-sm);
+    border: none;
+}
+
+.mfa-modal-cancel
+{
+    background: transparent;
+    border: 1px solid var(--border);
+}
+
+.mfa-modal-cancel:hover
+{
+    background-color: var(--border);
+}
+
+.verify-mfa-button
+{
+    background-color: var(--register);
+    color: var(--white);
+}
+
+.verify-mfa-button:hover
+{
+    opacity: 0.7;
+}
+
+.error-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

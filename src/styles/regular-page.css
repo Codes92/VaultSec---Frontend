@@ -1,0 +1,19 @@
+.regular-page-layout
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--surface);
+    background: linear-gradient(180deg, var(--primary) 0%, #0d4d73 100%);
+    /* #082d42 */
+    width: 100%;
+}
+
+.regular-page
+{
+    flex: 1;
+    padding: var(--space-xl) var(--space-lg);
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}

@@ -1,0 +1,22 @@
+.hashing-textarea
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.file-upload-label
+{
+    display: inline-block;
+    padding: var(--space-sm) var(--space-lg);
+    background-color: var(--primary);
+    color: var(--surface);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: var(--font-size-md);
+}
+
+.file-upload-label:hover
+{
+    background-color: var(--primary-hover);
+}

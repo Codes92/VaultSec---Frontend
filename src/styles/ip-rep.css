@@ -1,0 +1,64 @@
+.ip-check-form
+{
+    background-color: var(--white);
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: var(--space-xl);
+    gap: var(--space-lg);
+    align-items: center;
+    margin-bottom: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-white);
+}
+
+.ip-check-form form
+{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: var(--space-md);
+}
+
+/* ============== RESULTS SECTION STYLING ============== */
+/* ===================================================== */
+.ip-results-container
+{
+    background-color: var(--surface-dark);
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.ip-validity-bar
+{
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm) 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-medium);
+    color: var(--white);
+}
+
+.ip-validity-data
+{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    align-items: center;
+}
+
+.ip-data-value
+{
+    font-weight: var(--font-weight-bold);
+}

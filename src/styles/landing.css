@@ -1,0 +1,352 @@
+.landing-page
+{
+    background: linear-gradient(180deg, var(--primary) 0%, #0d4d73 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.landing-hero
+{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--surface);
+    padding: var(--space-lg);
+    position: relative;
+}
+
+.landing-hero h1
+{
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: var(--space-sm);
+}
+
+.landing-hero p
+{
+    font-size: 1.25rem;
+    color: var(--surface-dark);
+    margin-bottom: var(--space-lg);
+}
+
+.landing-buttons-container
+{
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.login-link-button
+{
+    padding: 1rem;
+    background-color: var(--primary);
+    border: 1px solid var(--surface);
+    color: var(--surface);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-lg);
+    width: 160px;
+}
+
+.login-link-button:hover
+{
+    background-color: var(--primary-hover);
+}
+
+.register-link-button
+{
+    padding: 1rem;
+    background-color: var(--register);
+    border: none;
+    color: var(--surface);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-lg);
+    width: 160px;
+}
+
+.register-link-button:hover
+{
+    background-color: var(--text-muted);
+}
+
+.scroll-indicator
+{
+    position: absolute;
+    bottom: var(--space-lg);
+    font-size: 1.5rem;
+    color: var(--surface);
+    animation: bounce 2s infinite;
+}
+
+/* ========================= FEATURES SECTION STYLES ========================= */
+/* =========================================================================== */
+.features-section
+{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    max-width: 1200px;
+    width: 100%;
+    padding: var(--space-xl) 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    border-top-left-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-md);
+}
+
+.features-section h2
+{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: var(--space-lg);
+}
+
+.feature-card-container
+{
+    display: flex;
+    gap: var(--space-lg);
+    padding: 0 var(--space-lg);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature-card
+{
+    flex: 1;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    min-height: 200px;
+    background-color: var(--surface-dark);
+    align-items: center;
+    text-align: center;
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    transition: all 0.2s;
+    border: 1px solid var(--primary);
+}
+
+.feature-card:hover
+{
+    transform: translateY(-4px);
+}
+
+.feature-card span
+{
+    font-size: 1.5rem;
+}
+
+.feature-card h3
+{
+    margin-bottom: auto;
+}
+
+@media(max-width: 1200px)
+{
+    .features-section
+    {
+        max-width: 95%;
+    }
+}
+
+@media(max-width: 900px)
+{
+    .features-section h2
+    {
+        font-size: 1.8rem;
+    }
+
+    .feature-card-container
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .landing-info-container
+    {
+        padding: var(--space-md);
+    }
+    
+    .landing-info-container h3
+    {
+        margin-bottom: var(--space-lg);
+    }
+}
+
+@media(max-width: 768px)
+{
+    .features-section
+    {
+        max-width: 90%;
+    }
+
+    .features-section h2
+    {
+        font-size: 1.5rem;
+    }
+
+    .feature-card h3
+    {
+        margin: 0;
+    }
+
+    .feature-card p
+    {
+        margin-top: var(--space-md);
+    }
+}
+
+/* ========================= SECURITY SECTION STYLES ========================= */
+/* =========================================================================== */
+.security-points-section
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-xl);
+    gap: var(--space-xxl);
+    background-color: var(--text-primary);
+    color: var(--surface);
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.security-points-section h2
+{
+    font-size: 2rem;
+}
+
+.security-info-container
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xxl);
+    font-size: var(--font-size-md);
+}
+
+.security-info
+{
+    padding: var(--space-md);
+    border: 1px solid var(--surface);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.security-info h3
+{
+    color: var(--register);
+}
+
+@media(max-width: 1200px)
+{
+    .security-points-section
+    {
+        max-width: 95%;
+    }
+}
+
+@media(max-width: 900px)
+{
+    .security-points-section
+    {
+        max-width: 90%;
+    }
+}
+
+@media(max-width: 600px)
+{
+    .feature-card-container
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .security-info-container
+    {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+/* ============================ CTA SECTION STYLES =========================== */
+/* =========================================================================== */
+.call-to-action
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: var(--space-xl);
+    gap: var(--space-xl);
+    background-color: var(--register);
+    color: var(--surface);
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.cta-text-container
+{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.cta-text-container h2
+{
+    font-size: 2rem;
+}
+.cta-text-container p
+{
+    font-size: var(--font-size-lg);
+}
+
+.create-account-button
+{
+    padding: 1rem;
+    background-color: var(--surface);
+    border: none;
+    color: var(--text-primary);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-lg);
+    padding: var(--space-lg);
+}
+
+.create-account-button:hover
+{
+    background-color: var(--surface-dark);
+}
+
+@media(max-width:1200px)
+{
+    .call-to-action
+    {
+        max-width: 95%;
+    }
+}
+
+@media(max-width:900px)
+{
+    .call-to-action
+    {
+        max-width: 90%
+    }
+}
+
+@media(max-width:768px)
+{
+    .call-to-action
+    {
+        max-width: 90%;
+    }
+}

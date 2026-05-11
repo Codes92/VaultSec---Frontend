@@ -1,0 +1,46 @@
+
+.pnf-message-container
+{
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xxl);
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pnf-text
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: var(--space-sm);
+}
+
+.pnf-message
+{
+    color: var(--surface);
+}
+
+.pnf-explanation
+{
+    color: var(--surface-dark);
+}
+
+.pnf-buttons-container
+{
+    display: flex;
+    gap: var(--space-xl);
+}
+
+@media(max-width: 768px)
+{
+    .pnf-buttons-container
+    {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,137 @@
+.category-heading
+{
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-md);
+
+    font-size: calc(var(--font-size-lg) * 1.1);
+    font-weight: var(--font-weight-medium);
+    color: var(--primary-light);
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    cursor: pointer;
+}
+
+.category-heading::before
+{
+    content: "";
+    display: block;
+    width: 4px;
+    height: 18px;
+    background: var(--register);
+    border-radius: 2px;
+}
+
+.category-heading:hover
+{
+    color: var(--register);
+}
+
+.chevron-icon
+{
+    transition: transform 0.2s ease;
+}
+
+.chevron-icon.open
+{
+    transform: rotate(180deg);
+}
+
+.tools-grid
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+    background-color: var(--surface-dark);
+    padding: var(--space-xl);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    max-height: 2000px;
+    transition: max-height 0.1s ease;
+}
+
+.tools-grid.closed
+{
+    max-height: 0;
+    padding: 0;
+}
+
+.tool-card
+{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: var(--space-md);
+    min-height: 220px;
+    background-color: var(--white);
+    color: var(--text-primary);
+    border-radius: var(--space-sm);
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+    position: relative;
+    box-shadow: var(--shadow-md);
+    width: 100%;
+}
+
+.tool-card:hover
+{
+    transform: translateY(-4px);
+    border: 1px solid var(--register);
+    box-shadow: var(--shadow-register);
+}
+
+.tool-card-title-container
+{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    align-items: center;
+    font-size: var(--font-size-lg);
+}
+
+.tool-card-icon-container
+{
+    background-color: rgba(26, 143, 191, 0.15);
+    padding: var(--space-lg);
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.tool-card-icon
+{
+    color: var(--register);
+}
+
+
+
+.tool-description
+{
+    color: var(--text-secondary);
+    padding: var(--space-sm);
+}
+
+@media(max-width: 660px)
+{
+    .security-tools-hero 
+    {
+        text-align: center;
+    }
+
+    .category-heading
+    {
+        justify-content: center;
+    }
+
+    .tools-grid
+    {
+        display: flex;
+        flex-direction: column;
+    }
+}

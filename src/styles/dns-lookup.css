@@ -1,0 +1,70 @@
+
+.dns-check-form
+{
+    background-color: var(--white);
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: var(--space-xl);
+    gap: var(--space-lg);
+    align-items: center;
+    margin-bottom: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-white);
+}
+
+.dns-check-form form
+{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    gap: var(--space-md);
+}
+
+.dns-results-container
+{
+    background-color: var(--surface-dark);
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+.dns-lookup-data
+{
+    background-color: var(--surface);
+    padding: var(--space-md);
+    border-radius: var(--radius-sm);
+}
+
+.dns-section-heading
+{
+    color: var(--primary);
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    padding-bottom: var(--space-sm);
+    text-align: center;
+}
+
+.dns-record
+{
+    font-family: monospace;
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    padding: var(--space-md);
+    word-break: break-all;
+    background-color: var(--hash);
+    border-radius: var(--radius-sm);
+}
+
+.no-records-found-message
+{
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: var(--font-size-sm);
+}

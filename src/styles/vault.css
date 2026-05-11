@@ -1,0 +1,161 @@
+.secrets-container
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--space-xxl);
+    justify-content: center;
+    gap: var(--space-xl);
+}
+
+.empty-vault
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--surface);
+    padding: var(--space-xxl);
+    gap: var(--font-size-lg);
+    border-radius: var(--radius-md);
+}
+
+.empty-message-heading
+{
+    color: var(--primary-light);
+    font-size: var(--font-size-lg);
+}
+
+.empty-message-subheading
+{
+    text-align: center;
+    color: var(--register);
+    font-size: var(--font-size-lg);
+}
+
+/* ========== Styling for add container button ========== */
+.add-secret-container
+{
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    justify-content: center;
+}
+
+.add-secret-button
+{
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--register);
+    color: var(--white);
+    border: none;
+    font-size: var(--font-size-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+    flex-shrink: 0;
+}
+
+.add-secret-button:hover
+{
+    background-color: var(--primary-hover);
+}
+
+.add-secret-message
+{
+    color: var(--primary-light);
+    font-size: var(--font-size-lg);
+}
+
+/* ========== Styling for modals ========== */
+.modal-overlay
+{
+    position: fixed;
+    width: 100%;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.modal
+{
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    width: 90%;
+    max-width: 400px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.modal-buttons
+{
+    display: flex;
+    gap: var(--space-md);
+    justify-content: center;
+}
+
+.modal-cancel, .modal-confirm
+{
+    padding: var(--space-sm) var(--space-xl);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-medium);
+    min-width: 100px;
+    transition: background-color 0.2s, border-color 0.2s;
+    border-radius: var(--radius-sm);
+}
+
+.modal h3
+{
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.modal p
+{
+    color: var(--text-secondary);
+    font-size: var(--font-size-md);
+    margin: 0;
+}
+
+.modal-cancel
+{
+    border: 1px solid var(--border);
+    background: var(--white);
+    color: var(--text-primary);
+}
+
+.modal-confirm
+{
+    border: 1px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.modal-cancel:hover
+{
+    border-color: var(--text-muted);
+}
+
+.modal-confirm:hover
+{
+    background-color: var(--primary-hover);
+}
+
+@media(max-width: 420px)
+{
+    .modal-buttons
+    {
+        flex-direction: column;
+    }
+}

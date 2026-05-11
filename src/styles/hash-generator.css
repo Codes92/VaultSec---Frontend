@@ -1,0 +1,88 @@
+/* =============== HASHING SECTION STYLING =============== */
+/* ======================================================= */
+.generate-hash-container
+{
+    margin: 0 auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+    background-color: var(--white);
+    padding: var(--space-lg);
+    border: none;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--space-xl);
+}
+
+.dropdown-textarea-container
+{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.hash-alg-dropdown, .hashing-textarea
+{
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.dropdown-title, .textarea-title
+{
+    margin-bottom: var(--space-sm);
+    text-align: center;
+}
+
+.hash-submit-button
+{
+    margin: 0 auto;
+    padding: var(--space-md) var(--space-xl);
+    border: none;
+    border-radius: var(--radius-sm);
+    background-color: var(--primary);
+    color: var(--surface);
+    font-size: var(--font-size-lg);
+}
+
+.hash-submit-button:hover
+{
+    background-color: var(--primary-hover);
+}
+
+/* =============== RESULT SECTION STYLING =============== */
+/* ====================================================== */
+.hash-result-container
+{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
+    max-width: 600px;
+    border: 1px solid black;
+    border-radius: var(--radius-md);
+    background-color: var(--surface-dark);
+    text-align: center;
+}
+
+.hash-result
+{
+    overflow-wrap: break-word;
+    background-color: var(--hash);
+    border-radius: var(--radius-md);
+    padding: var(--space-md);
+    text-align: left;
+}
+
+.hash-copy-button
+{
+    margin: 0 auto;
+    padding: var(--space-md) var(--space-xl);
+    border: none;
+    border-radius: var(--radius-sm);
+    background-color: var(--success);
+    color: var(--white);
+    font-size: var(--font-size-lg);
+}

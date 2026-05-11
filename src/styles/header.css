@@ -1,0 +1,197 @@
+/* ============================== HEADER STYLING ============================== */
+/* ============================================================================ */
+
+.nav-link
+{
+    color: var(--primary-light);
+    text-decoration: none;
+}
+
+.nav-link:hover
+{
+    color: var(--register);
+}
+
+.nav-link, .logout-button
+{
+    line-height: 1.5rem;
+    padding: 0.5rem 1.5rem;
+}
+
+.nav-link.active
+{
+    position: relative;
+}
+
+.nav-link.active::after
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background-color: var(--primary-light);
+}
+
+.app-navbar
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2.5rem;
+    background: transparent;
+    position: relative;
+    /* box-shadow: var(--shadow-lg); *
+    linear-gradient(135deg, var(--primary) 0%, #0d4d73 100%) */
+    border-bottom: 1px solid var(--surface);
+    z-index: 999;
+}
+
+.navbar-left
+{
+    display: flex;
+    font-size: 18px;
+}
+
+.logo-link
+{
+  padding: 0 !important; /* Remove link padding for image */ 
+  text-decoration: none;
+  color: var(--surface);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.navbar-logo 
+{
+  height: 60px;
+  width: auto;
+  display: block;
+  border-radius: 6px;
+  padding: 2px 4px;
+}
+
+.hamburger
+{
+    display: none;
+}
+
+.navbar-right
+{
+    display: flex;
+    gap: 2rem;
+    font-size: 18px;
+    align-items: center;
+}
+
+.logout-button
+{
+    background-color: var(--primary-light);
+    color: var(--primary);
+    border: 1px solid var(--text-lightest);
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.logout-button:hover
+{
+    background-color: var(--register);
+    color: var(--primary-light);
+    transform: scale(1.05);
+}
+
+@media (max-width: 1100px)
+{
+    .navbar-right
+    {
+        gap: 1.5rem;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 950px)
+{
+    .navbar-right
+    {
+        gap: 1rem;
+        font-size: var(--font-size-md);
+    }
+
+    .nav-link, .logout-button
+    {
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media (max-width: 850px)
+{
+    .navbar-right
+    {
+        font-size: var(--font-size-md);
+    }
+
+    .nav-link, .logout-button
+    {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .app-navbar
+    {
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px)
+{
+    .hamburger
+    {
+        display: block;
+        background: none;
+        border: none;
+        font-size: var(--font-size-xl);
+        color: var(--primary-light);
+        cursor: pointer;
+    }
+
+    .app-navbar .navbar-right
+    {
+        display: none;
+    }
+
+    .navbar-right
+    {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        background-color: var(--primary);
+        flex-direction: column;
+        width: 200px;
+        padding: 1rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        gap: 1rem;
+    }
+
+    .app-navbar .navbar-right.mobile-open
+    {
+        display: flex !important;
+        position: absolute;
+        top: 100%;
+        right: 0;  /* Anchors to right side */
+        width: 100%;  /* Fixed width menu */
+        background-color: var(--primary);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: var(--shadow-md);
+        gap: 1rem;
+    }
+
+    .logout-button
+    {
+        margin-top: var(--space-lg);
+        margin-bottom: var(--space-lg);
+    }
+}

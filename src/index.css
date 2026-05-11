@@ -1,0 +1,264 @@
+/* Avoid inconsistencies when browsers apply default margins, padding and box-sizing */
+*, *::before, *::after
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Colours, fonts, font sizes/weights, spacing - consistently used in the app */
+:root {
+  /* Colours */
+  --primary: #0B3D5B;
+  --primary-hover: #0d4d73;
+  --primary-light: #e8f0f7;
+  --surface: #F5F7FA;
+  --surface-dark: #e2e8f0;
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --danger: #e53e3e;
+  --danger-light: #fff5f5;
+  --success: #38a169;
+  --border: #e2e8f0;
+  --white: #ffffff;
+  --register: #1A8FBF;
+  --hash: bisque;
+  --text-soft-white: rgba(255,255,255,0.7);
+  --border-dark-soft: rgba(255, 255, 255, 0.1);
+
+  /* Fonts */
+  --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: ui-monospace, Consolas, monospace;
+
+  /* Typography scale */
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 20px;
+  --font-size-xl: 32px;
+  --font-size-xxl: 48px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --line-height: 1.5;
+
+  /* Spacing scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+
+  /* Border radius and shadow tokens */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-register: 0 4px 12px rgba(31, 168, 191, 0.1);
+  --shadow-white: 0 8px 16px rgba(255, 255, 255, 0.12);
+  
+}
+
+/* Base styles for dark mode */
+@media (prefers-color-scheme: dark)
+{
+  :root {
+    --surface: #1a202c;
+    --surface-dark: #2d3748;
+    --text-primary: #e2e8f0;
+    --text-secondary: #a0aec0;
+    --border: #2d3748;
+    --white: #2d3748;
+  }
+}
+
+/* Base body styles */
+body
+{
+  font-family: var(--sans);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height);
+  color: var(--text-primary);
+  background-color: var(--surface);
+  /* antialiasing to make text look smoother and more crisp */
+  -webkit-font-smoothing: antialiased; /* On Windows, this usually has no impact */
+}
+
+button
+{
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Every regular page (not the landing, login or register pages) has a title section
+   with a heading and, in most cases, a subheading, so it can be controlled from global styles 
+*/
+.title-section
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  gap: var(--space-lg);
+  padding: var(--space-xl) 0 var(--space-sm) 0;
+}
+
+/* Within the overall title section (heading and subheading), the main heading section will be
+   controlled within a div in order to better position icons
+*/
+.page-title-container
+{
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.page-title
+{
+    margin: 0;
+    color: var(--surface);
+    font-size: var(--font-size-xl);
+}
+
+.page-subheading
+{
+    margin-top: -20px;
+    color: var(--surface-dark);
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-lg);
+}
+
+.tool-title
+{
+  font-size: var(--font-size-lg);
+}
+
+.loading-message
+{
+  color: var(--surface);
+}
+
+/* ============ STATUS BADGES ============ */
+.badge
+{
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  top: var(--space-sm);
+  right: var(--space-sm);
+  position: absolute;
+}
+
+.badge-available
+{
+  background-color: var(--success);
+  color: var(--white);
+  padding: 2px var(--space-md);
+}
+
+.badge-coming-soon
+{
+  background-color: var(--hash);
+  color: var(--primary);
+  padding: 2px var(--space-sm);
+}
+
+.badge-unavailable
+{
+  background-color: var(--danger);
+  color: var(--danger-light);
+}
+
+/* ============== BACK TO SEC TOOLS STYLING ============== */
+/* ======================================================= */
+
+.back-to-security-tools-container
+{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-xl);
+    padding: var(--space-lg);
+}
+
+.back-to-security-tools-button
+{
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-sm);
+    border: none;
+    font-size: inherit;
+    background-color: var(--register);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.back-to-security-tools-button:hover
+{
+    filter: brightness(0.9);
+}
+
+.back-to-homepage-button, .back-to-vault-button
+{
+    text-decoration: none;
+    padding: var(--space-md) var(--space-lg);
+    border: none;
+    font-size: inherit;
+    border-radius: var(--radius-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+.back-to-homepage-button
+{
+  background-color: var(--border);
+  color: var(--primary);
+}
+
+.back-to-homepage-button:hover
+{
+  filter: brightness(0.9);
+}
+
+.back-to-vault-button
+{
+  background-color: var(--register);
+  color: var(--white);
+}
+.back-to-vault-button:hover
+{
+    filter: brightness(0.9);
+}
+
+@media(max-width: 768px)
+{
+  .back-to-homepage-button, .back-to-vault-button
+  {
+    text-align: center;
+  }
+}
+
+.error
+{
+    color: var(--danger);
+    background-color: var(--danger-light);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--danger);
+    font: var(--font-size-sm);
+    margin-bottom: var(--space-md);
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* ============== RESULT STYLING ============== */
+/* ============================================ */
+.result-title
+{
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-bold);
+  margin-top: var(--space-sm);
+}

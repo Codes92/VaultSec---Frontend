@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"; // Use state provides memory to the page (otherwise data such as email/password disappears)
 import { Settings } from "lucide-react";
-import MFASettings from "../components/MFAsettings";
+import MFASettings from "../components/MFASettings";
 import PasswordSettings from "../components/PasswordSettings";
 import DangerZone from "../components/DangerZone";
 

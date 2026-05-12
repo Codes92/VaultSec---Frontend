@@ -1,6 +1,6 @@
 .landing-page
 {
-    background: linear-gradient(180deg, var(--primary) 0%, #0d4d73 100%);
+    background: linear-gradient(180deg, var(--primary) 0%, var(--primary-hover) 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;

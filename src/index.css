@@ -9,7 +9,8 @@
 /* Colours, fonts, font sizes/weights, spacing - consistently used in the app */
 :root {
   /* Colours */
-  --primary: #0B3D5B;
+  /*--primary: #0B3D5B; */
+  --primary: #161B25;
   --primary-hover: #0d4d73;
   --primary-light: #e8f0f7;
   --surface: #F5F7FA;

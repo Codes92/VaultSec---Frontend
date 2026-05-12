@@ -9,7 +9,7 @@
 /* Colours, fonts, font sizes/weights, spacing - consistently used in the app */
 :root {
   /* Colours */
-  --primary: #0B3D5B;
+  /* --primary: #0B3D5B;
   --primary-hover: #0d4d73;
   --primary-light: #e8f0f7;
   --surface: #F5F7FA;
@@ -25,6 +25,24 @@
   --register: #1A8FBF;
   --hash: bisque;
   --text-soft-white: rgba(255,255,255,0.7);
+  --border-dark-soft: rgba(255, 255, 255, 0.1); */
+
+  --primary: #1D6FA4;
+  --primary-hover: #1A5F8C;
+  --primary-light: #0D1E2E;
+  --surface: #0F1923;
+  --surface-dark: #0A1219;
+  --text-primary: #FFFFFF;
+  --text-secondary: #C4CAD4;
+  --text-muted: #7A8799;
+  --danger: #E53E3E;
+  --danger-light: #2D1010;
+  --success: #38A169;
+  --border: #1E2E3E;
+  --white: #FFFFFF;
+  --register: #1D6FA4;
+  --hash: #7A8799;
+  --text-soft-white: rgba(255, 255, 255, 0.7);
   --border-dark-soft: rgba(255, 255, 255, 0.1);
 
   /* Fonts */
